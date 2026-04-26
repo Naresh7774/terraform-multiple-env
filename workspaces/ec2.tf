@@ -27,3 +27,11 @@ resource "aws_security_group" "allow_all" {
     cidr_blocks      = var.cidr
   }
 
+  tags = merge(
+      local.common_tags,
+      {
+        Name = "${local.common_name}-workspace"
+      }
+  )
+
+}
