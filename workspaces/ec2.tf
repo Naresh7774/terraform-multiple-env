@@ -20,3 +20,10 @@ resource "aws_security_group" "allow_all" {
     cidr_blocks      = var.cidr
   }
 
+  ingress {
+    from_port        = var.ingress_from_port
+    to_port          = var.ingress_to_port
+    protocol         = var.protocol
+    cidr_blocks      = var.cidr
+  }
+
