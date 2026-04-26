@@ -18,3 +18,11 @@ variable "instance_type" {
 
 
 variable "cidr" {
+    type = list
+    default = ["0.0.0.0/0"]
+}
+
+variable "ingress_from_port" {
+    default = 0
+}
+
